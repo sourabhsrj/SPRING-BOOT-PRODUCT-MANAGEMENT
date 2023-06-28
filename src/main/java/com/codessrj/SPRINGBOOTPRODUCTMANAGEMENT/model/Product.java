@@ -1,9 +1,15 @@
 package com.codessrj.SPRINGBOOTPRODUCTMANAGEMENT.model;
 
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+
 import java.util.Date;
 
 public class Product extends CommmonAttributes{
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
     private String productName;
